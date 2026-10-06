@@ -1,0 +1,103 @@
+<mat-card class="carte-creation">
+  <mat-card-title>Creation de compte</mat-card-title>
+  <mat-card-content>
+    <mat-stepper linear>
+      <mat-step [stepControl]="formulaireInfos">
+        <form [formGroup]="formulaireInfos" class="formulaire">
+          <ng-template matStepLabel>Informations personnelles</ng-template>
+          <mat-form-field appearance="outline">
+            <mat-label>Nom</mat-label>
+            <input matInput formControlName="nom" />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Prenom</mat-label>
+            <input matInput formControlName="prenom" />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Date de naissance</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="naissance" [max]="dateMax()" />
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error *ngIf="formulaireInfos.get('naissance')?.hasError('required')">
+              Date de naissance requise
+            </mat-error>
+            <mat-error *ngIf="formulaireInfos.get('naissance')?.hasError('minAge')">
+              Vous devez avoir au moins 18 ans
+            </mat-error>
+          </mat-form-field>
+
+          <div class="actions">
+            <button mat-button color="primary" type="button" (click)="revenirConnexion()">
+              Annuler
+            </button>
+            <button mat-raised-button color="primary" matStepperNext [disabled]="formulaireInfos.invalid">
+              Suivant
+            </button>
+          </div>
+        </form>
+      </mat-step>
+
+      <mat-step [stepControl]="formulaireCompte">
+        <form [formGroup]="formulaireCompte" class="formulaire">
+          <ng-template matStepLabel>Compte internet</ng-template>
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email" />
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Mot de passe</mat-label>
+            <input matInput type="password" formControlName="password" />
+          </mat-form-field>
+
+          <div class="actions">
+            <button mat-button color="primary" matStepperPrevious>Precedent</button>
+            <button
+              mat-raised-button
+              color="primary"
+              type="button"
+              [disabled]="formulaireCompte.invalid || verificationEnCours()"
+              (click)="verifierEmailEtContinuer()"
+            >
+              Suivant
+            </button>
+          </div>
+        </form>
+      </mat-step>
+
+      <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <div class="resume">
+          <div class="ligne">
+            <span>Nom</span>
+            <strong>{{ resume().nom }}</strong>
+          </div>
+          <div class="ligne">
+            <span>Prenom</span>
+            <strong>{{ resume().prenom }}</strong>
+          </div>
+          <div class="ligne">
+            <span>Date de naissance</span>
+            <strong>{{ resume().naissance | date: 'dd/MM/yyyy' }}</strong>
+          </div>
+          <div class="ligne">
+            <span>Email</span>
+            <strong>{{ resume().email }}</strong>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button mat-button color="primary" matStepperPrevious>Precedent</button>
+          <button
+            mat-raised-button
+            color="primary"
+            type="button"
+            [disabled]="boutonCreationDesactive()"
+            (click)="creerCompte()"
+          >
+            Creer mon compte
+          </button>
+        </div>
+      </mat-step>
+    </mat-stepper>
+  </mat-card-content>
+</mat-card>

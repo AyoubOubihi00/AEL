@@ -1,0 +1,44 @@
+.carte-connexion {
+  width: min(360px, 92vw);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  --mdc-outlined-text-field-container-shape: 4px;
+  --mdc-text-button-container-shape: 4px;
+  --mdc-filled-button-container-shape: 4px;
+  --mdc-protected-button-container-shape: 4px;
+}
+
+.carte-connexion mat-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.carte-connexion mat-card-content {
+  padding: 0 18px 18px;
+}
+
+.carte-connexion mat-card-title {
+  padding: 18px 18px 0;
+}
+
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.actions .mat-mdc-button,
+.actions .mat-mdc-raised-button {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  font-size: 12px;
+}

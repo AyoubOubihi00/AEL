@@ -1,0 +1,184 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.dashboard {
+  height: calc(100vh - 42px);
+  width: 100%;
+  background: var(--app-bg);
+  overflow: hidden;
+}
+
+.menu-lateral {
+  width: 190px;
+  background: var(--surface-bg);
+  border-right: 1px solid var(--border-color);
+}
+
+.contenu {
+  padding: 24px 48px 24px 24px;
+  min-height: 100%;
+  height: 100%;
+  min-width: 0;
+  width: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.contenu {
+  scrollbar-width: thin;
+  scrollbar-color: #9b9b9b #d9d9d9;
+}
+
+.contenu::-webkit-scrollbar {
+  width: 12px;
+}
+
+.contenu::-webkit-scrollbar-track {
+  background: #d9d9d9;
+  border-radius: 8px;
+}
+
+.contenu::-webkit-scrollbar-thumb {
+  background: #9b9b9b;
+  border-radius: 8px;
+  border: 2px solid #d9d9d9;
+}
+
+.contenu::-webkit-scrollbar-thumb:hover {
+  background: #7f7f7f;
+}
+
+.cartes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+.carte {
+  padding: 16px;
+  border-radius: 6px;
+  height: 100%;
+  min-height: 220px;
+  min-width: 0;
+}
+
+.carte-pleine {
+  min-height: 220px;
+}
+
+.chart-wrapper {
+  margin-top: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.chart-image {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+}
+
+.factures {
+  margin-top: 16px;
+}
+
+.ligne {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 6px 0;
+  font-size: 13px;
+}
+
+.montant {
+  font-size: 38px;
+  font-weight: 700;
+  margin-top: 22px;
+  text-align: center;
+}
+
+.document {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 120px;
+}
+
+.icone {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 0;
+  position: relative;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #444;
+}
+
+.icone.inactif {
+  opacity: 0.4;
+}
+
+.bouton-justificatif {
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.icone-svg {
+  width: 46px;
+  height: 46px;
+}
+
+@media (max-width: 900px) {
+  .cartes {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.factures-entete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.bouton-historique {
+  font-size: 12px;
+}
+
+.historique {
+  margin-top: 12px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 8px;
+}
+
+.historique-ligne {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr auto;
+  gap: 8px;
+  padding: 4px 0;
+  font-size: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.historique-entete {
+  font-weight: 600;
+  color: #666;
+}
+
+.align-right {
+  text-align: right;
+}

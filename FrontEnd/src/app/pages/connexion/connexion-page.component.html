@@ -1,0 +1,31 @@
+<mat-card class="carte-connexion">
+  <mat-card-title>Bienvenue</mat-card-title>
+  <mat-card-content>
+    <form class="formulaire" [formGroup]="formulaire" autocomplete="off">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Mot de passe</mat-label>
+        <input matInput type="password" formControlName="password" />
+      </mat-form-field>
+
+      <div class="actions">
+        <button mat-button color="primary" type="button" (click)="allerInscription()">
+          Créer un compte
+        </button>
+        <button
+          mat-raised-button
+          color="primary"
+          type="button"
+          [disabled]="boutonDesactive()"
+          (click)="seConnecter()"
+        >
+          Se connecter
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

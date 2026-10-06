@@ -1,0 +1,81 @@
+<mat-sidenav-container class="dashboard">
+  <mat-sidenav mode="side" opened class="menu-lateral">
+    <app-menu-lateral [contrats]="contrats()"></app-menu-lateral>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="contenu">
+    <div class="cartes">
+      <mat-card class="carte">
+        <mat-card-title>Consommations</mat-card-title>
+        <div class="chart-wrapper" *ngIf="urlGraphique() as url">
+          <img class="chart-image" [src]="url" alt="Graphique consommation" />
+        </div>
+      </mat-card>
+
+      <mat-card class="carte">
+  <div class="factures-entete">
+    <mat-card-title>Factures</mat-card-title>
+    <button mat-button type="button" class="bouton-historique" (click)="toggleHistorique()">
+      {{ historiqueVisible() ? 'Masquer' : 'Historique' }}
+    </button>
+  </div>
+  <div class="factures">
+    <div class="ligne">
+      <span>Reference</span>
+      <strong>Montant</strong>
+    </div>
+    <div class="ligne" *ngIf="facture() as factureActuelle">
+      <span>{{ factureActuelle.reference }}</span>
+      <strong>{{ factureActuelle.amount | currency:'EUR':'symbol':'1.0-0' }}</strong>
+    </div>
+  </div>
+  <div class="historique" *ngIf="historiqueVisible()">
+    <div class="historique-ligne historique-entete">
+      <span>Contrat</span>
+      <span>Reference</span>
+      <span>Date</span>
+      <span class="align-right">Montant</span>
+    </div>
+    <div class="historique-ligne" *ngFor="let item of historiqueFactures()">
+      <span>{{ item.contractName }}</span>
+      <span>{{ item.reference }}</span>
+      <span>{{ item.date | date: 'dd/MM/yyyy' }}</span>
+      <span class="align-right">{{ item.amount | currency:'EUR':'symbol':'1.0-0' }}</span>
+    </div>
+  </div>
+</mat-card>
+
+      <mat-card class="carte carte-pleine">
+        <mat-card-title>Estimation prochaine facture</mat-card-title>
+        <div class="montant">{{ estimation() }}€</div>
+      </mat-card>
+
+      <mat-card class="carte carte-pleine">
+        <mat-card-title>Justificatif de domicile</mat-card-title>
+        <div class="document">
+          <button
+            type="button"
+            class="icone bouton-justificatif"
+            [class.inactif]="!justificatif()"
+            (click)="telechargerJustificatif()"
+          >
+            <svg class="icone-svg" viewBox="0 0 60 60" aria-hidden="true">
+              <g fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 16h20l6 6v22H18z" />
+                <path d="M38 16v8h8" />
+                <path d="M14 22h18l6 6v18H14z" />
+                <path d="M20 30h16" />
+                <path d="M20 36h16" />
+              </g>
+            </svg>
+          </button>
+        </div>
+      </mat-card>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+
+

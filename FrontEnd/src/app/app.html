@@ -1,0 +1,29 @@
+<div class="page" [class.theme-dark]="themeDark()">
+  <mat-toolbar color="primary" class="top-bar">
+    <span class="titre">Agence en ligne</span>
+    <span class="spacer"></span>
+    <button
+      mat-icon-button
+      type="button"
+      aria-label="Changer le theme"
+      (click)="toggleTheme()"
+    >
+      <mat-icon>{{ themeDark() ? 'light_mode' : 'dark_mode' }}</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      type="button"
+      *ngIf="estConnecte()"
+      aria-label="Deconnexion"
+      (click)="deconnexion()"
+    >
+      <mat-icon>power_settings_new</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <main class="main-shell" [class.auth]="estPageAuth()">
+    <router-outlet></router-outlet>
+  </main>
+
+  <mat-toolbar color="primary" class="bottom-bar" *ngIf="estPageAuth()"></mat-toolbar>
+</div>

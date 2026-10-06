@@ -1,0 +1,50 @@
+.carte-creation {
+  width: min(720px, 95vw);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  --mdc-outlined-text-field-container-shape: 4px;
+  --mdc-text-button-container-shape: 4px;
+  --mdc-filled-button-container-shape: 4px;
+  --mdc-protected-button-container-shape: 4px;
+}
+
+.carte-creation mat-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.carte-creation mat-card-content {
+  padding: 0 18px 18px;
+}
+
+.carte-creation mat-card-title {
+  padding: 18px 18px 0;
+}
+
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.resume {
+  margin: 20px 0;
+  display: grid;
+  gap: 10px;
+}
+
+.ligne {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 6px;
+}

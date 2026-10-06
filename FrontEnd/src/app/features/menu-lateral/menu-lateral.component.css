@@ -1,0 +1,31 @@
+.menu {
+  padding: 10px 0;
+}
+
+.menu .mat-mdc-list-item {
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  height: 32px;
+}
+
+.menu .mat-mdc-list-item.actif {
+  font-weight: 700;
+}
+
+.menu .mat-mdc-list-item.actif-custom {
+  background: rgba(63, 81, 181, 0.08);
+  font-weight: 700;
+}
+
+.groupe {
+  margin-top: 8px;
+}
+
+.titre {
+  font-size: 11px;
+  color: #6e6e6e;
+  padding: 8px 16px 4px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}

@@ -1,0 +1,17 @@
+<mat-nav-list class="menu">
+  <a mat-list-item routerLink="/tableau-bord" routerLinkActive="actif">
+    Tableau de bord
+  </a>
+  <div class="groupe">
+    <div class="titre">Mes contrats</div>
+    <a
+      *ngFor="let contrat of contrats"
+      mat-list-item
+      [routerLink]="['/contrats', contrat.id]"
+      routerLinkActive="actif"
+      [class.actif-custom]="contratActif() === contrat.id"
+    >
+      {{ contrat.name | uppercase }}
+    </a>
+  </div>
+</mat-nav-list>

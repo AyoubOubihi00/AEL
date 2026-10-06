@@ -1,0 +1,59 @@
+<mat-sidenav-container class="dashboard">
+  <mat-sidenav mode="side" opened class="menu-lateral">
+    <app-menu-lateral [contrats]="contrats()"></app-menu-lateral>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="contenu">
+    <mat-card class="carte-contrat" *ngIf="contrat() as contratActuel">
+      <mat-card-title>Contrat {{ contratActuel.reference }}</mat-card-title>
+      <mat-tab-group>
+        <mat-tab label="Informations">
+          <div class="info-liste">
+            <div class="info-ligne">
+              <span>Référence</span>
+              <strong>{{ contratActuel.reference }}</strong>
+            </div>
+            <div class="info-ligne">
+              <span>Activité</span>
+              <strong>{{ contratActuel.activity }}</strong>
+            </div>
+            <div class="info-ligne">
+              <span>Date de souscription</span>
+              <strong>{{ contratActuel.subscriptionDate | date: 'dd/MM/yyyy' }}</strong>
+            </div>
+            <div class="info-ligne">
+              <span>Adresse</span>
+              <strong>{{ contratActuel.address }}</strong>
+            </div>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Consommation">
+          <div class="chart-wrapper" *ngIf="urlGraphique() as url">
+            <img class="chart-image" [src]="url" alt="Graphique consommation" />
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Factures">
+          <table mat-table [dataSource]="contratActuel.invoices" class="table-factures">
+            <ng-container matColumnDef="reference">
+              <th mat-header-cell *matHeaderCellDef>Référence</th>
+              <td mat-cell *matCellDef="let facture">{{ facture.reference }}</td>
+            </ng-container>
+            <ng-container matColumnDef="amount">
+              <th mat-header-cell *matHeaderCellDef>Montant</th>
+              <td mat-cell *matCellDef="let facture">{{ facture.amount }}€</td>
+            </ng-container>
+            <ng-container matColumnDef="date">
+              <th mat-header-cell *matHeaderCellDef>Date</th>
+              <td mat-cell *matCellDef="let facture">{{ facture.date | date: 'dd/MM/yyyy' }}</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="colonnesFactures"></tr>
+            <tr mat-row *matRowDef="let row; columns: colonnesFactures"></tr>
+          </table>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+  </mat-sidenav-content>
+</mat-sidenav-container>

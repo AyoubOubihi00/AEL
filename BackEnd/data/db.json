@@ -1,0 +1,802 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "email": "user01@toto.fr",
+      "password": "toto-du-57",
+      "firstName": "Lewis",
+      "lastName": "Hamilton",
+      "birthDate": "1990-01-26"
+    },
+    {
+      "id": "u2",
+      "email": "user02@toto.fr",
+      "password": "toto-du-54",
+      "firstName": "Oubihi",
+      "lastName": "Ayoub",
+      "birthDate": "2001-10-10"
+    }
+  ],
+  "contracts": [
+    {
+      "id": "c123",
+      "userId": "u1",
+      "reference": "123",
+      "name": "Contrat 1",
+      "activity": "Elec",
+      "subscriptionDate": "2029-01-26",
+      "address": "3 chemin du moulin, METZ 57000",
+      "consumptions": [
+        {
+          "month": "Jan",
+          "value": 48
+        },
+        {
+          "month": "Fev",
+          "value": 75
+        },
+        {
+          "month": "Mar",
+          "value": 77
+        },
+        {
+          "month": "Avr",
+          "value": 53
+        },
+        {
+          "month": "Mai",
+          "value": 24
+        },
+        {
+          "month": "Jun",
+          "value": 17
+        },
+        {
+          "month": "Jul",
+          "value": 39
+        }
+      ],
+      "invoices": [
+        {
+          "reference": "123-A",
+          "amount": 78,
+          "date": "2025-11-12"
+        },
+        {
+          "reference": "123-B",
+          "amount": 102,
+          "date": "2025-12-12"
+        }
+      ],
+      "nextInvoiceEstimate": 83
+    },
+    {
+      "id": "c124",
+      "userId": "u1",
+      "reference": "124",
+      "name": "Contrat 2",
+      "activity": "Gaz",
+      "subscriptionDate": "2029-01-26",
+      "address": "3 chemin du moulin, METZ 57001",
+      "consumptions": [
+        {
+          "month": "Jan",
+          "value": 150
+        },
+        {
+          "month": "Fev",
+          "value": 154
+        },
+        {
+          "month": "Mar",
+          "value": 105
+        },
+        {
+          "month": "Avr",
+          "value": 48
+        },
+        {
+          "month": "Mai",
+          "value": 35
+        },
+        {
+          "month": "Jun",
+          "value": 78
+        },
+        {
+          "month": "Jul",
+          "value": 138
+        }
+      ],
+      "invoices": [
+        {
+          "reference": "124-A",
+          "amount": 71,
+          "date": "2025-11-12"
+        },
+        {
+          "reference": "124-B",
+          "amount": 86,
+          "date": "2025-12-12"
+        }
+      ],
+      "nextInvoiceEstimate": 75
+    },
+    {
+      "id": "c125",
+      "userId": "u1",
+      "reference": "125",
+      "name": "Contrat 3",
+      "activity": "Elec",
+      "subscriptionDate": "2029-01-26",
+      "address": "3 chemin du moulin, METZ 57002",
+      "consumptions": [
+        {
+          "month": "Jan",
+          "value": 231
+        },
+        {
+          "month": "Fev",
+          "value": 158
+        },
+        {
+          "month": "Mar",
+          "value": 71
+        },
+        {
+          "month": "Avr",
+          "value": 52
+        },
+        {
+          "month": "Mai",
+          "value": 117
+        },
+        {
+          "month": "Jun",
+          "value": 207
+        },
+        {
+          "month": "Jul",
+          "value": 239
+        }
+      ],
+      "invoices": [
+        {
+          "reference": "125-A",
+          "amount": 64,
+          "date": "2025-11-12"
+        },
+        {
+          "reference": "125-B",
+          "amount": 70,
+          "date": "2025-12-12"
+        }
+      ],
+      "nextInvoiceEstimate": 67
+    },
+    {
+      "id": "c203",
+      "userId": "u2",
+      "reference": "203",
+      "name": "Contrat 1",
+      "activity": "Elec",
+      "subscriptionDate": "2029-01-26",
+      "address": "3 chemin du moulin, NANCY 57000",
+      "consumptions": [
+        {
+          "month": "Jan",
+          "value": 48
+        },
+        {
+          "month": "Fev",
+          "value": 75
+        },
+        {
+          "month": "Mar",
+          "value": 77
+        },
+        {
+          "month": "Avr",
+          "value": 53
+        },
+        {
+          "month": "Mai",
+          "value": 24
+        },
+        {
+          "month": "Jun",
+          "value": 17
+        },
+        {
+          "month": "Jul",
+          "value": 39
+        }
+      ],
+      "invoices": [
+        {
+          "reference": "203-A",
+          "amount": 95,
+          "date": "2025-11-12"
+        },
+        {
+          "reference": "203-B",
+          "amount": 125,
+          "date": "2025-12-12"
+        }
+      ],
+      "nextInvoiceEstimate": 100
+    },
+    {
+      "id": "c204",
+      "userId": "u2",
+      "reference": "204",
+      "name": "Contrat 2",
+      "activity": "Gaz",
+      "subscriptionDate": "2029-01-26",
+      "address": "3 chemin du moulin, NANCY 57001",
+      "consumptions": [
+        {
+          "month": "Jan",
+          "value": 150
+        },
+        {
+          "month": "Fev",
+          "value": 154
+        },
+        {
+          "month": "Mar",
+          "value": 105
+        },
+        {
+          "month": "Avr",
+          "value": 48
+        },
+        {
+          "month": "Mai",
+          "value": 35
+        },
+        {
+          "month": "Jun",
+          "value": 78
+        },
+        {
+          "month": "Jul",
+          "value": 138
+        }
+      ],
+      "invoices": [
+        {
+          "reference": "204-A",
+          "amount": 88,
+          "date": "2025-11-12"
+        },
+        {
+          "reference": "204-B",
+          "amount": 109,
+          "date": "2025-12-12"
+        }
+      ],
+      "nextInvoiceEstimate": 92
+    },
+    {
+      "id": "c205",
+      "userId": "u2",
+      "reference": "205",
+      "name": "Contrat 3",
+      "activity": "Elec",
+      "subscriptionDate": "2029-01-26",
+      "address": "3 chemin du moulin, NANCY 57002",
+      "consumptions": [
+        {
+          "month": "Jan",
+          "value": 231
+        },
+        {
+          "month": "Fev",
+          "value": 158
+        },
+        {
+          "month": "Mar",
+          "value": 71
+        },
+        {
+          "month": "Avr",
+          "value": 52
+        },
+        {
+          "month": "Mai",
+          "value": 117
+        },
+        {
+          "month": "Jun",
+          "value": 207
+        },
+        {
+          "month": "Jul",
+          "value": 239
+        }
+      ],
+      "invoices": [
+        {
+          "reference": "205-A",
+          "amount": 81,
+          "date": "2025-11-12"
+        },
+        {
+          "reference": "205-B",
+          "amount": 93,
+          "date": "2025-12-12"
+        }
+      ],
+      "nextInvoiceEstimate": 84
+    },
+    {
+      "id": "c206",
+      "userId": "u3",
+      "reference": "206",
+      "name": "Contrat 1",
+      "activity": "Elec",
+      "subscriptionDate": "2029-01-26",
+      "address": "3 chemin du moulin, NANCY 57000",
+      "consumptions": [
+        {
+          "month": "Jan",
+          "value": 48
+        },
+        {
+          "month": "Fev",
+          "value": 75
+        },
+        {
+          "month": "Mar",
+          "value": 77
+        },
+        {
+          "month": "Avr",
+          "value": 53
+        },
+        {
+          "month": "Mai",
+          "value": 24
+        },
+        {
+          "month": "Jun",
+          "value": 17
+        },
+        {
+          "month": "Jul",
+          "value": 39
+        }
+      ],
+      "invoices": [
+        {
+          "reference": "206-A",
+          "amount": 108,
+          "date": "2025-11-12"
+        },
+        {
+          "reference": "206-B",
+          "amount": 142,
+          "date": "2025-12-12"
+        }
+      ],
+      "nextInvoiceEstimate": 113
+    },
+    {
+      "id": "c207",
+      "userId": "u3",
+      "reference": "207",
+      "name": "Contrat 2",
+      "activity": "Gaz",
+      "subscriptionDate": "2029-01-26",
+      "address": "3 chemin du moulin, NANCY 57001",
+      "consumptions": [
+        {
+          "month": "Jan",
+          "value": 150
+        },
+        {
+          "month": "Fev",
+          "value": 154
+        },
+        {
+          "month": "Mar",
+          "value": 105
+        },
+        {
+          "month": "Avr",
+          "value": 48
+        },
+        {
+          "month": "Mai",
+          "value": 35
+        },
+        {
+          "month": "Jun",
+          "value": 78
+        },
+        {
+          "month": "Jul",
+          "value": 138
+        }
+      ],
+      "invoices": [
+        {
+          "reference": "207-A",
+          "amount": 101,
+          "date": "2025-11-12"
+        },
+        {
+          "reference": "207-B",
+          "amount": 126,
+          "date": "2025-12-12"
+        }
+      ],
+      "nextInvoiceEstimate": 105
+    },
+    {
+      "id": "c208",
+      "userId": "u3",
+      "reference": "208",
+      "name": "Contrat 3",
+      "activity": "Elec",
+      "subscriptionDate": "2029-01-26",
+      "address": "3 chemin du moulin, NANCY 57002",
+      "consumptions": [
+        {
+          "month": "Jan",
+          "value": 231
+        },
+        {
+          "month": "Fev",
+          "value": 158
+        },
+        {
+          "month": "Mar",
+          "value": 71
+        },
+        {
+          "month": "Avr",
+          "value": 52
+        },
+        {
+          "month": "Mai",
+          "value": 117
+        },
+        {
+          "month": "Jun",
+          "value": 207
+        },
+        {
+          "month": "Jul",
+          "value": 239
+        }
+      ],
+      "invoices": [
+        {
+          "reference": "208-A",
+          "amount": 94,
+          "date": "2025-11-12"
+        },
+        {
+          "reference": "208-B",
+          "amount": 110,
+          "date": "2025-12-12"
+        }
+      ],
+      "nextInvoiceEstimate": 97
+    },
+    {
+      "id": "c218",
+      "userId": "u4",
+      "reference": "218",
+      "name": "Contrat 1",
+      "activity": "Elec",
+      "subscriptionDate": "2029-01-26",
+      "address": "3 chemin du moulin, NANCY 57000",
+      "consumptions": [
+        {
+          "month": "Jan",
+          "value": 48
+        },
+        {
+          "month": "Fev",
+          "value": 75
+        },
+        {
+          "month": "Mar",
+          "value": 77
+        },
+        {
+          "month": "Avr",
+          "value": 53
+        },
+        {
+          "month": "Mai",
+          "value": 24
+        },
+        {
+          "month": "Jun",
+          "value": 17
+        },
+        {
+          "month": "Jul",
+          "value": 39
+        }
+      ],
+      "invoices": [
+        {
+          "reference": "218-A",
+          "amount": 89,
+          "date": "2025-11-12"
+        },
+        {
+          "reference": "218-B",
+          "amount": 111,
+          "date": "2025-12-12"
+        }
+      ],
+      "nextInvoiceEstimate": 94
+    },
+    {
+      "id": "c219",
+      "userId": "u4",
+      "reference": "219",
+      "name": "Contrat 2",
+      "activity": "Gaz",
+      "subscriptionDate": "2029-01-26",
+      "address": "3 chemin du moulin, NANCY 57001",
+      "consumptions": [
+        {
+          "month": "Jan",
+          "value": 150
+        },
+        {
+          "month": "Fev",
+          "value": 154
+        },
+        {
+          "month": "Mar",
+          "value": 105
+        },
+        {
+          "month": "Avr",
+          "value": 48
+        },
+        {
+          "month": "Mai",
+          "value": 35
+        },
+        {
+          "month": "Jun",
+          "value": 78
+        },
+        {
+          "month": "Jul",
+          "value": 138
+        }
+      ],
+      "invoices": [
+        {
+          "reference": "219-A",
+          "amount": 82,
+          "date": "2025-11-12"
+        },
+        {
+          "reference": "219-B",
+          "amount": 95,
+          "date": "2025-12-12"
+        }
+      ],
+      "nextInvoiceEstimate": 86
+    },
+    {
+      "id": "c220",
+      "userId": "u4",
+      "reference": "220",
+      "name": "Contrat 3",
+      "activity": "Elec",
+      "subscriptionDate": "2029-01-26",
+      "address": "3 chemin du moulin, NANCY 57002",
+      "consumptions": [
+        {
+          "month": "Jan",
+          "value": 231
+        },
+        {
+          "month": "Fev",
+          "value": 158
+        },
+        {
+          "month": "Mar",
+          "value": 71
+        },
+        {
+          "month": "Avr",
+          "value": 52
+        },
+        {
+          "month": "Mai",
+          "value": 117
+        },
+        {
+          "month": "Jun",
+          "value": 207
+        },
+        {
+          "month": "Jul",
+          "value": 239
+        }
+      ],
+      "invoices": [
+        {
+          "reference": "220-A",
+          "amount": 125,
+          "date": "2025-11-12"
+        },
+        {
+          "reference": "220-B",
+          "amount": 154,
+          "date": "2025-12-12"
+        }
+      ],
+      "nextInvoiceEstimate": 128
+    },
+    {
+      "id": "c212",
+      "userId": "u2",
+      "reference": "212",
+      "name": "Contrat 1",
+      "activity": "Elec",
+      "subscriptionDate": "2029-01-26",
+      "address": "3 chemin du moulin, NANCY 57000",
+      "consumptions": [
+        {
+          "month": "Jan",
+          "value": 48
+        },
+        {
+          "month": "Fev",
+          "value": 75
+        },
+        {
+          "month": "Mar",
+          "value": 77
+        },
+        {
+          "month": "Avr",
+          "value": 53
+        },
+        {
+          "month": "Mai",
+          "value": 24
+        },
+        {
+          "month": "Jun",
+          "value": 17
+        },
+        {
+          "month": "Jul",
+          "value": 39
+        }
+      ],
+      "invoices": [
+        {
+          "reference": "212-A",
+          "amount": 63,
+          "date": "2025-11-12"
+        },
+        {
+          "reference": "212-B",
+          "amount": 77,
+          "date": "2025-12-12"
+        }
+      ],
+      "nextInvoiceEstimate": 68
+    },
+    {
+      "id": "c213",
+      "userId": "u2",
+      "reference": "213",
+      "name": "Contrat 2",
+      "activity": "Gaz",
+      "subscriptionDate": "2029-01-26",
+      "address": "3 chemin du moulin, NANCY 57001",
+      "consumptions": [
+        {
+          "month": "Jan",
+          "value": 150
+        },
+        {
+          "month": "Fev",
+          "value": 154
+        },
+        {
+          "month": "Mar",
+          "value": 105
+        },
+        {
+          "month": "Avr",
+          "value": 48
+        },
+        {
+          "month": "Mai",
+          "value": 35
+        },
+        {
+          "month": "Jun",
+          "value": 78
+        },
+        {
+          "month": "Jul",
+          "value": 138
+        }
+      ],
+      "invoices": [
+        {
+          "reference": "213-A",
+          "amount": 106,
+          "date": "2025-11-12"
+        },
+        {
+          "reference": "213-B",
+          "amount": 136,
+          "date": "2025-12-12"
+        }
+      ],
+      "nextInvoiceEstimate": 110
+    },
+    {
+      "id": "c214",
+      "userId": "u2",
+      "reference": "214",
+      "name": "Contrat 3",
+      "activity": "Elec",
+      "subscriptionDate": "2029-01-26",
+      "address": "3 chemin du moulin, NANCY 57002",
+      "consumptions": [
+        {
+          "month": "Jan",
+          "value": 231
+        },
+        {
+          "month": "Fev",
+          "value": 158
+        },
+        {
+          "month": "Mar",
+          "value": 71
+        },
+        {
+          "month": "Avr",
+          "value": 52
+        },
+        {
+          "month": "Mai",
+          "value": 117
+        },
+        {
+          "month": "Jun",
+          "value": 207
+        },
+        {
+          "month": "Jul",
+          "value": 239
+        }
+      ],
+      "invoices": [
+        {
+          "reference": "214-A",
+          "amount": 99,
+          "date": "2025-11-12"
+        },
+        {
+          "reference": "214-B",
+          "amount": 120,
+          "date": "2025-12-12"
+        }
+      ],
+      "nextInvoiceEstimate": 102
+    }
+  ]
+}
